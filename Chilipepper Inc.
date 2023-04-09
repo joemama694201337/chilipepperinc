@@ -1,0 +1,126 @@
+local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
+
+local X = Material.Load({
+	Title = "Chilipepper Inc. Hub",
+	Style = 3,
+	SizeX = 500,
+	SizeY = 350,
+	Theme = "Light",
+	ColorOverrides = {
+		MainFrame = Color3.fromRGB(235,235,235)
+	}
+})
+
+local Y = X.New({
+	Title = "Main"
+})
+
+local Z = X.New({
+	Title = "2"
+})
+
+local A = Y.Button({
+	Text = "Progression gamepasses",
+	Callback = function()
+
+local RaceProgression = Instance.new("StringValue", game.Players.LocalPlayer.Gamepasses)
+    RaceProgression.Name = "48232208";
+    RaceProgression.Value = "48232208";
+local RaceProgression2 = Instance.new("StringValue", game.Players.LocalPlayer.Gamepasses)
+    RaceProgression2.Name = "48232208";
+    RaceProgression2.Value = "48232208";
+
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "give u the gamepasses"
+			})
+		end
+	}
+})
+
+local B = Y.Button({
+	Text = "Every cool item",
+	Callback = function()
+
+local args = {
+   [1] = "Update_Tools",
+   [2] = {
+       [1] = "Fists",
+       [2] = "Yamamoto's Cane",
+       [3] = "Ichigo's Cape",
+       [4] = "Akatsuki's Cloak",
+       [5] = "Excalibur",
+       [6] = "Head Captains Cape",
+       [7] = "Barragan's Axe",
+       [8] = "The Legendary Orb",
+       [9] = "Golden Blick",
+       [10] = "Shunsui's Cloak"
+   }
+}
+
+game:GetService("ReplicatedStorage").Remotes.Server.Initiate_Server:FireServer(unpack(args))
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "Spawns chickens"
+			})
+		end
+	}
+})
+
+
+local A = Y.Button({
+	Text = "Remove nametag",
+	Callback = function()
+  
+  local LP = game:GetService("Players").LocalPlayer
+
+for i,v in pairs(LP.PlayerGui:GetChildren()) do
+    if v:FindFirstChild("LocalScript") then
+        local ScreenGui = v
+        ScreenGui:Destroy()
+    end
+end
+  
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "frick all moderators"
+			})
+		end
+	}
+})
+
+local A = Y.Button({
+	Text = "eat all dropped food",
+	Callback = function()
+  
+getgenv().AutoEat = true
+while AutoEat do
+    local partsEat = game:GetService("Workspace").World.Visuals
+
+    for i, v in ipairs(partsEat:GetChildren()) do
+        local prompt = v:FindFirstChild("Eat_Part");
+        if prompt and prompt:IsA("ProximityPrompt") then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+            fireproximityprompt(prompt)
+            task.wait(2)
+        end
+    end
+    task.wait()
+end
+
+
+	end,
+	Menu = {
+		Information = function(self)
+			X.Banner({
+				Text = "cant turn off for now srry adrvsj"
+			})
+		end
+	}
+})
