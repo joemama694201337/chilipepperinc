@@ -20,7 +20,7 @@ local Z = X.New({
 })
 
 local A = Y.Button({
-	Text = "Progression gamepasses",
+	Text = "Progression Gamepasses",
 	Callback = function()
 
 local RaceProgression = Instance.new("StringValue", game.Players.LocalPlayer.Gamepasses)
@@ -41,7 +41,7 @@ local RaceProgression2 = Instance.new("StringValue", game.Players.LocalPlayer.Ga
 })
 
 local B = Y.Button({
-	Text = "Every cool item",
+	Text = "Rare Drops",
 	Callback = function()
 
 local args = {
@@ -73,7 +73,7 @@ game:GetService("ReplicatedStorage").Remotes.Server.Initiate_Server:FireServer(u
 
 
 local A = Y.Button({
-	Text = "Remove nametag",
+	Text = "Remove Nametag",
 	Callback = function()
   
   local LP = game:GetService("Players").LocalPlayer
@@ -96,7 +96,7 @@ end
 })
 
 local A = Y.Button({
-	Text = "eat all dropped food",
+	Text = "Eat All Dropped Food",
 	Callback = function()
   
 getgenv().AutoEat = true
